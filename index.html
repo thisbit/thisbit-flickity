@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flickity</title>
+	<link rel="stylesheet" href="lib/flickity.min.css">
+	<style>
+
+		figure {
+			margin: 0;
+		}
+
+
+		.carousel {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		.flickity-viewport {
+			height: 75%;
+			min-height: 700px;
+			width: 100%;
+		}
+
+		.carousel-cell {
+			height: 100%;
+			margin-right: 2rem;
+		}
+
+		.carousel-image {
+			height: 100%;
+		}
+
+		.flickity-prev-next-button {
+			top: 100%;
+			width: 90px;
+			height: 59px;
+			margin-top: 2rem;
+			border-radius: unset; 
+			transform: unset;
+			position: unset;
+			order: 2;
+		}
+
+		.flickity-button {
+			position: unset;
+			background: none;
+			border: none;
+			color: #333;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+		}
+
+		.flickity-page-dots {
+			position: unset;
+			width: fit-content;
+			display: flex;
+			justify-content: center;
+			margin-right: auto;
+			margin-left: .5rem;
+			margin-top: 2rem;
+		}
+
+		.flickity-prev-next-button .flickity-button-icon {
+			position: unset;
+			width: 100%;
+			height: 100%;
+		}
+
+		.flickity-prev-next-button .flickity-button-icon path {
+			stroke: #ccc;
+		}
+
+		.flickity-prev-next-button:hover .flickity-button-icon path,
+		.flickity-prev-next-button:focus .flickity-button-icon path {
+			stroke: #222 !important;
+		}
+
+		.flickity-button.next .flickity-button-icon path {
+			transform: translate(90px, 77px) rotate(180deg);
+			stroke: #ccc;
+		}
+		.flickity-button.previous .flickity-button-icon path {
+			transform: translate(0px, 17px);
+		}
+
+		button.flickity-page-dot:focus,
+		button.flickity-prev-next-button:focus {
+			outline: solid black 2px;
+			box-shadow: none !important;
+		}
+
+		.flickity-page-dot.is-selected,
+		.flickity-page-dot:focus,
+		.flickity-page-dot:hover {
+				background: #FF5E5E;
+		}
+
+		
+	</style>
+</head>
+<body>
+
+	<figure class="carousel">
+		<figure class="carousel-cell">
+			<img class="carousel-image"  data-flickity-lazyload="images/slide0.jpg" srcset="" alt="caption 1">
+		</figure>
+		<figure class="carousel-cell">
+			<img class="carousel-image"  data-flickity-lazyload="images/slide1.jpg" srcset="" alt="caption 2 ">
+		</figure>
+		<figure class="carousel-cell">
+			<img class="carousel-image"  data-flickity-lazyload="images/slide2.jpg" srcset="" alt="caption 3">
+		</figure>
+		<figure class="carousel-cell">
+			<img class="carousel-image"  data-flickity-lazyload="images/slide3.jpg" srcset="" alt="caption 4 ">
+		</figure>
+		<figure class="carousel-cell">
+			<img class="carousel-image"  data-flickity-lazyload="images/slide4.jpg" srcset="" alt="caption 5">
+		</figure>
+		<figure class="carousel-cell">
+			<img class="carousel-image"  data-flickity-lazyload="images/slide5.jpg" srcset="" alt="caption 6">
+		</figure>
+		<figure class="carousel-cell">
+			<img class="carousel-image"  data-flickity-lazyload="images/slide6.jpg" srcset="" alt="caption 7">
+		</figure>
+		<figure class="carousel-cell">
+			<img class="carousel-image"  data-flickity-lazyload="images/slide7.jpg" srcset="" alt="caption 8">
+		</figure>
+	</figure>
+	<p class="caption">&nbsp;</p>
+	<script src="lib/flickity.pkgd.min.js"></script>
+	<script>
+		var flky = new Flickity( '.carousel', {
+			setGallerySize: false,
+			wrapAround: true,
+			resize: true,
+			freeScroll: true,
+			lazyLoad: 1,
+			arrowShape:  
+				'M 30.3054 58.7195L0.573275 30.0126L30.2929 0.292968L31.7071 1.70718L4.41422 29.0001L87 29.0001L87 31.0001L4.47541 31.0001L31.6946 57.2807L30.3054 58.7195 Z',
+		});
+	</script>
+	
+</body>
+</html>
+
+
